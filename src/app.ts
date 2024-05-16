@@ -5,8 +5,8 @@ import {
 	paymasterClientV06,
 	paymasterClientV07,
 	urlToProvider,
-} from "./config";
-import { erc7677RequestSchema, jsonRpcSchema } from "./schemas";
+} from "./config.js";
+import { erc7677RequestSchema, jsonRpcSchema } from "./schemas.js";
 import {
 	ENTRYPOINT_ADDRESS_V06,
 	ENTRYPOINT_ADDRESS_V07,
@@ -14,8 +14,8 @@ import {
 } from "permissionless";
 import { fromZodError } from "zod-validation-error";
 import type { Chain } from "viem";
-import { env } from "./env";
-import { getPimlicoContext } from "./providers";
+import { env } from "./env.js";
+import { getPimlicoContext } from "./providers.js";
 const provider = urlToProvider(env.PAYMASTER_SERVICE_URL);
 
 const app = new Hono();
