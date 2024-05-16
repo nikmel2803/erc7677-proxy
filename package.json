@@ -3,6 +3,7 @@
         "dev": "tsx watch src/index.ts",
         "start": "tsx src/index.ts"
     },
+    "type": "module",
     "dependencies": {
         "@hono/node-server": "^1.11.1",
         "@t3-oss/env-core": "^0.10.1",
