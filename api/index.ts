@@ -1,18 +1,10 @@
-import { Hono } from 'hono'
 import { handle } from '@hono/node-server/vercel'
+import app from '../src/app'
 
 export const config = {
   api: {
     bodyParser: false,
   },
 }
-
-const app = new Hono().basePath('/api')
-
-app.get('/hello', (c) => {
-  return c.json({
-    message: 'Hello from Hono!',
-  })
-})
 
 export default handle(app)
