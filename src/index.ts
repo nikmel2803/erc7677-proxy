@@ -31,9 +31,9 @@ app.get("/", (c) => {
             <body>
                 <pre style="word-wrap: break-word; white-space: pre-wrap;">
 Hello World!
-                    
+
 This is an ERC-7677 Paymaster Service Proxy.
-                    
+
 Visit <a href="https://github.com/pimlicolabs/erc7677-proxy">the GitHub repository</a> for more information on configuring your proxy.
                 </pre>
             </body>
@@ -150,3 +150,5 @@ serve({
 	fetch: app.fetch,
 	port,
 });
+
+export default app;
