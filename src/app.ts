@@ -18,7 +18,7 @@ import { env } from "./env.js";
 import { getPimlicoContext } from "./providers.js";
 const provider = urlToProvider(env.PAYMASTER_SERVICE_URL);
 
-const app = new Hono().basePath("/api");
+const app = new Hono();
 app.use(logger());
 
 app.get("/", (c) => {
