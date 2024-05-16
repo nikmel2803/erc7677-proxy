@@ -5,4 +5,6 @@ import app from '../src/app.js'
 //   runtime: 'nodejs'
 // }
 
+app.basePath('/api')
+
 export default handle(app)
