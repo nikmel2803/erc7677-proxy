@@ -7,5 +7,4 @@ export const config = {
   },
 }
 
-export default handle(app)
-ч
+export default handle(app);
