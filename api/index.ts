@@ -1,10 +1,14 @@
+import { Hono } from 'hono'
 import { handle } from 'hono/vercel'
-import app from '../src/app.js'
 
 // export const config = {
-//   runtime: 'nodejs'
+//   runtime: 'edge'
 // }
 
-app.basePath('/api')
+const app = new Hono().basePath('/api')
+
+app.get('/', (c) => {
+  return c.json({ message: 'Hello Hono!' })
+})
 
 export default handle(app)
